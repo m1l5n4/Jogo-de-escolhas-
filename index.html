@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retorno à Terra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>RETORNO À TERRA</h1>
+        
+        <div class="status">
+            <div class="status-item">
+                <div>Combustível</div>
+                <div class="status-value" id="fuel">100%</div>
+            </div>
+            <div class="status-item">
+                <div>Integridade</div>
+                <div class="status-value" id="integrity">100%</div>
+            </div>
+            <div class="status-item">
+                <div>Tripulação</div>
+                <div id="crew"></div>
+            </div>
+        </div>
+        
+        <div class="scene" id="scene">
+            Sua nave, a Voyager VII, sofreu uma colisão com detritos espaciais enquanto realizava uma missão de pesquisa no cinturão de asteroides. Agora, com sistemas danificados e suprimentos limitados, você e sua tripulação de 5 membros precisam voltar para a Terra antes que seja tarde demais.
+            
+            O caminho mais rápido passa perto de uma estrela instável, enquanto a rota mais longa exigiria mais combustível. O que você decide?
+        </div>
+        
+        <div class="choices" id="choices">
+            <button onclick="makeChoice(1)">Tomar a rota mais curta perto da estrela instável</button>
+            <button onclick="makeChoice(2)">Seguir pela rota mais longa para evitar perigos</button>
+            <button onclick="makeChoice(3)">Tentar reparos na nave antes de decidir a rota</button>
+        </div>
+        
+        <div class="game-over" id="gameOver">
+            <div id="gameOverText"></div>
+            <button class="restart-btn" onclick="restartGame()">Tentar Novamente</button>
+        </div>
+    </div>
+
+    <div class="animation" id="animation"></div>
+    <script src="script.js"></script>
+
+</body>
+</html>
